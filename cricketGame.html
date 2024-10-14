@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1> Bat Ball Stump Game</h1>
+    <button onclick="
+    let randomnum = Math.random()*3;
+    let comchoice;
+    if(randomnum > 0 && randomnum<=1)
+   {
+    comchoice = 'Bat';
+   }
+   else if(randomnum > 1 && randomnum<=2)
+   {
+    comchoice = 'Ball';
+   }
+   else
+   {
+    comchoice = 'Stump';
+   }
+    let result;
+    if(comchoice === 'Bat')
+    {
+        result = `It's a tia`;
+    }
+    else if(comchoice === 'Ball')
+    {
+        result = `User won`;
+    }
+    else
+    {
+        result = `Computer has won`;
+    }
+    alert( `You have chosen Bat. Computer choice is ${comchoice} and ${result}`);
+    "> Bat </button>
+   
+   <button onclick="
+    let randomnum1 = Math.random()*3;
+    let comchoice1;
+    if(randomnum1 > 0 && randomnum1<=1)
+   {
+    comchoice = 'Bat';
+   }
+   else if(randomnum1 > 1 && randomnum1<=2)
+   {
+    comchoice1 = 'Ball';
+   }
+   else
+   {
+    comchoice1 = 'Stump';
+   }
+    let result1;
+    if(comchoice1 === 'Bat')
+    {
+        result1 = `Computer has won`;
+    }
+    else if(comchoice1 === 'Ball')
+    {
+        result1 = `It's a tia`;
+    }
+    else
+    {
+        result1 = `User won`;
+    }
+    alert( `You have chosen Ball. Computer choice is ${comchoice1} and ${result1}`);
+    ">Ball</button>
+   
+   
+   <button onclick="
+    let randomnum2 = Math.random()*3;
+    let comchoice2;
+    if(randomnum2 > 0 && randomnum2<=1)
+   {
+    comchoice2 = 'Bat';
+   }
+   else if(randomnum2 > 1 && randomnum2<=2)
+   {
+    comchoice2 = 'Ball';
+   }
+   else
+   {
+    comchoice2 = 'Stump';
+   }
+    let result2;
+    if(comchoice2 === 'Bat')
+    {
+        result2 = `User won`;
+    }
+    else if(comchoice2 === 'Ball')
+    {
+        result2 = `Computer has won`;
+    }
+    else
+    {
+        result2 = `It's a tia`;
+    }
+    alert( `You have chosen Stump. Computer choice is ${comchoice2} and ${result2}`);
+    ">Stump</button>
+</body>
+</html>
