@@ -32,6 +32,13 @@
      ">Stump</button>
 
     <script>
+
+        let score = {
+            win : 0,
+            lost : 0,
+            tie : 0,
+        };
+
      function generateComChoice(){
        let randomnum = Math.random()*3;
         if(randomnum > 0 && randomnum<=1)
@@ -52,14 +59,17 @@
         {
             if(comAns === 'Bat')
             {
+                 score.tie++;
                  return `It's a tia`;
             }
              else if(comAns === 'Ball')
             {
+                 score.win++;
                  return  `User won`;
             }
              else
             {
+                 score.lost++;
                  return  `Computer has won`;
             }
 
@@ -67,14 +77,17 @@
         {
             if(comAns === 'Bat')
             {
+                score.lost++;
                  return `Computer has won`;
             }
             else if(comAns === 'Ball')
             {
+                  score.tie++;
                   return `It's a tia`;
             }
             else
             {
+                 score.win++;
                  return `User won`;
             }
 
@@ -82,21 +95,28 @@
 
             if(comAns === 'Bat')
             {
+                 score.win++;
                  return `User won`;
             }
              else if(comAns === 'Ball')
-            {
+            { 
+                 score.lost++;
                  return `Computer has won`;
             }
             else
             {
+                 score.tie++;
                  return `It's a tia`;
             }
         }
       
      }
      function showResult(userAns , comAns, result){
-        alert( `You have chosen ${userAns}. Computer choice is ${comAns} and ${result}`);
+        alert( `You have chosen ${userAns}. Computer choice is ${comAns}. 
+        
+        ${result}
+        
+         won : ${score.win} , Lost : ${ score.lost} , Tie : ${score.tie}`);
      }
     
     </script>
